@@ -20,20 +20,32 @@ class Test:
 
 
 class Person:
-    # Class variable
+    # Klasss-variabel
     count = 0
+    persons = []
 
     def __init__(self, name, age):
-
         self.name = name
         self.age = age
-        # Increment the count when a new instance is created
+        # Øk telleren for hver gang en ny person blir laget
         Person.count += 1
+        Person.persons.append(self)
+
+    def __str__(self):
+        return f"Name: {self.name}, Age: {self.age}"
+
+    def __repr__(self):
+        return f"Person({self.name}, {self.age})"
+
+    def __del__(self):
+        # Fjern personen fra listen når objektet blir slettet
+        Person.count -= 1
+        Person.persons.remove(self)
 
     def print_info(self):
         print(f"Name: {self.name}, Age: {self.age}")
 
-    # Class method
+    # Klasse-metode
     @classmethod
     def print_count(cls):
         print(f"Total number of persons: {cls.count}")
@@ -46,6 +58,7 @@ person1.print_info()
 person2.print_info()
 
 Person.print_count()
+
 
 app = Flask("test")
 
