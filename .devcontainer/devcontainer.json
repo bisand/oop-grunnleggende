@@ -14,7 +14,9 @@
 				"KevinRose.vsc-python-indent",
 				"ms-vscode.vs-keybindings",
 				"GitHub.copilot",
-				"GitHub.copilot-chat"
+				"GitHub.copilot-chat",
+				"ms-python.black-formatter",
+				"ms-python.autopep8"
 			]
 		}
 	}
