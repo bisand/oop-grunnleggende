@@ -1,24 +1,12 @@
-from flask import Flask
+# Objektorientert Programmering
 
+## Grunnleggende
 
-class Test:
-    """
-    A class representing a test.
+### Klasser og objekter
 
-    Attributes:
-        test (any): The test value.
-    """
+Klasser er en måte å definere objekter på. Objekter er en instans av en klasse. En klasse kan ha attributter og metoder. Attributter er egenskaper til objektet, mens metoder er funksjoner som kan utføres på objektet.
 
-    def __init__(self, test):
-        self.test = test
-
-    def print_test(self):
-        """
-        Test method
-        """
-        print(f"Hello from {self.test}")
-
-
+```python
 class Person:
     # Class variable
     count = 0
@@ -33,11 +21,11 @@ class Person:
     def print_info(self):
         print(f"Name: {self.name}, Age: {self.age}")
 
+
     # Class method
     @classmethod
     def print_count(cls):
         print(f"Total number of persons: {cls.count}")
-
 
 person1 = Person("Alice", 30)
 person2 = Person("Bob", 25)
@@ -47,15 +35,8 @@ person2.print_info()
 
 Person.print_count()
 
-app = Flask("test")
+```
 
-test = Test("Testing 123")
-test.print_test()
+### Oppgaver
 
-
-@app.route("/")
-def index():
-    return f"Hello from {test.test}"
-
-
-app.run()
+Klikk [her](oppgaver/oppgaver.md) for å se oppgaver.
