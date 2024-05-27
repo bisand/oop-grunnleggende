@@ -1,3 +1,5 @@
+from flask import Flask, render_template
+
 class Car:
 
     instanceCount: int = 0
@@ -37,20 +39,16 @@ class Car:
         print(f"Instances: {Car.instanceCount}")
 
 
-# volvo = Car("Volvo", "XC60", 1990, 98)
-# tesla = Car("Tesla", "Model 3", 2023, 200)
-# lada = Car("Lada", "2000")
-# ford = Car()
-# Car.printAvailableCars()
 
+app = Flask("test")
 
-# tesla.printSpeed()
-# tesla.increaseSpeed(10)
-# tesla.printSpeed()
+@app.route('/')
+def index():
+    return render_template('index.html')
 
-# del ford
+@app.route('/newcar')
+def new_car():
+    car = Car("Volvo", "V40", 1980, 98)
+    return car.__str__()
 
-# print(volvo)
-# print(tesla)
-
-# print(volvo.__repr__())
+app.run()
