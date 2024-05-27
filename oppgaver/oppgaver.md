@@ -1,3 +1,11 @@
+# Oppgaver - Grunnleggende
+
+## Beskrivelse
+
+Lag klasser ut fra beskrivelsene nedenfor. For å få godkjent arbeidskravet må du lage minst 3 av klassene. Du kan velge hvilke du vil lage, gjerne alle, hvis du vil. Klassene skal ha variabler, konstruktør og metoder som beskrevet. Du kan også legge til flere metoder om du ønsker det.
+
+## Oppgaver
+
 ### 1. Bilklasse
 
 - **Variabler**: merke, modell, år, hastighet  
